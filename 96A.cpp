@@ -24,14 +24,14 @@ void solve() {
         if (s[i] == s[i-1]) cur_count++;
         else cur_count = 1;
         if(cur_count >= 7){
-            cout << "NO"; return;
+            cout << "YES"; return;
         }
     }
-    cout << "YES";
+    cout << "NO";
 }
 
 int main() {
-    // ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     ll test = 1;
     // cin >> test;
     while(test--) {
