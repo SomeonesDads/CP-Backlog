@@ -18,22 +18,30 @@ void _debug(const char* names, T&& value, Args&&... args) {
 #define mod 1000000007
 
 void solve() {
-    string s; cin >> s;
-    int cur_count = 1;
-    for(int i = 1; i < s.size(); i++){
-        if (s[i] == s[i-1]) cur_count++;
-        else cur_count = 1;
-        if(cur_count >= 7){
-            cout << "YES"; return;
+    int n; cin >> n;
+    vector<int> a(n); REP(i, n) cin >> a[i];
+    vector<int> steps; int count = 0;
+    RREP(i, n){
+        if(a[i]*(pow((-1), (count))) > 0){
+            steps.push_back(i);
+            count++;
         }
     }
-    cout << "NO";
+    cout << count << "\n";
+    if(steps.size()!=0){
+    REP(i, steps.size()-1){
+        cout << steps[i]+1 << " ";
+    }
+    cout << steps[steps.size()-1]+1;
+    }
+    cout << "\n";
+
 }
 
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     ll test = 1;
-    // cin >> test;
+    cin >> test;
     while(test--) {
         solve();
     }
