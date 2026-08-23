@@ -58,15 +58,5 @@ void solve() {
     for (auto const& [target, count] : count) if (count == uniques) if (ans == -1 || sumop[target] < ans) ans = sumop[target];
     cout << ans << "\n";
 }
-int main() {
-    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-    ll test=1;
-    cin>>test;
-    while(test--)
-    {
-        solve();
-    }
-    return 0;
-}
  
 // TLE kena, MLE kena, mati ajala heang
