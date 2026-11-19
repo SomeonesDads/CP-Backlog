@@ -21,7 +21,7 @@ template<typename T, typename... Args>
 void solve()
 {
     int a, b; cin >> a >> b;
-    cout << ((a - b) < -2 ? -1 : (max(a, b) + max(0, a-b))) << '\n';
+    cout << ((a - b) <= -2 ? -1 : (max(a, b) + max(0, a-b))) << '\n';
 }
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
